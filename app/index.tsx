@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
   return (
@@ -10,8 +10,19 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Hello</Text>
-      <StatusBar hidden={false} style="dark"/>
+      <Text style={Styles.mainText}>Hello</Text>
+      <StatusBar hidden={false} style="dark" />
     </View>
   );
 }
+
+const Styles = StyleSheet.create({
+  mainText: {
+    fontSize: 20,
+    fontWeight: "bold",
+    borderWidth: 1,
+    borderColor: "red",
+    padding: 10,
+    borderRadius: 5,
+  },
+});
